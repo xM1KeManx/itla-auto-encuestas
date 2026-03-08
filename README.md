@@ -32,6 +32,15 @@ En resumen:
 - Evalua primero a mano los maestros que quieras calificar diferente
 - Luego ejecuta el script y el hara el resto automaticamente
 
+Asi se ve tu plataforma y eso es lo que eliminará:
+![descripcion](assets/imagen1.png)
+
+Si ves esto no te alarmes lo puedes ejecutar con seguridad de que no pasará nada:
+![descripcion](assets/imagen2.png)
+
+Y asi se ve la interfaz en el CMD:
+![descripcion](assets/imagen3.png)
+
 ---
 
 ## Instalacion

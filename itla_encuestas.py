@@ -436,6 +436,20 @@ def seleccionar_calificacion_5(driver):
 def completar_encuestas(driver):
     wait = WebDriverWait(driver, 10)
     completadas = 0
+    # Verificar que el usuario está en la página correcta antes de continuar.
+    #Si no hay encuestas pendientes, salir sin modificar nada
+    if "qualification-student" not in driver.current_url:
+        print("\n[!] Error: No te encuentras en la sección de encuestas.")
+        print("    Asegúrate de estar en: https://perfil.itla.edu.do/#/qualification-student")
+        return 0
+    try:
+        WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "i.flaticon-proceso-3"))
+        )
+    except TimeoutException:
+        print("\n[i] No se detectaron encuestas pendientes en la página actual.")
+        return 0
+
     print("\n[*] Buscando encuestas pendientes...\n")
 
     while True:

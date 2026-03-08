@@ -116,6 +116,9 @@ en menos de 5 minutos:
 
 **Paso 3:** Ve a https://chatgpt.com y pega el codigo con este mensaje:
 
+Y aquí está el link de la conversacion con Clove:
+https://claude.ai/share/42e8f4a3-e6f1-4c79-877b-db84f15349dc
+
 ---
 
 > Analiza este codigo de Python y dime de forma clara:

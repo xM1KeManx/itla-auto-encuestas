@@ -349,7 +349,16 @@ def iniciar_driver(nav_info):
 
     perfil_real = perfiles_usuario.get(nav_info["nombre"])
 
-    print(f"  [i] Cerrando {nav_info['nombre']} si esta abierto...")
+    print(f"\n[!] ATENCIÓN: Se cerrará {nav_info['nombre']} para poder automatizarlo.")
+    print("[!] Guarda cualquier trabajo pendiente en tus pestañas.")
+    input("Presiona ENTER para continuar o Ctrl+C para cancelar...")
+    print()
+    for i in range(5, 0, -1):
+        print(f"  Cerrando en {i}...", end="\r")
+    time.sleep(1) 
+    print() 
+
+    print(f"  [i] Cerrando {nav_info['nombre']}...")  
     subprocess.run(["taskkill", "/F", "/IM", nombre_proceso], capture_output=True)
     time.sleep(1.5)
 
@@ -427,7 +436,6 @@ def seleccionar_calificacion_5(driver):
 def completar_encuestas(driver):
     wait = WebDriverWait(driver, 10)
     completadas = 0
-
     print("\n[*] Buscando encuestas pendientes...\n")
 
     while True:

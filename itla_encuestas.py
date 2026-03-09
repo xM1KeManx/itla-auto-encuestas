@@ -355,7 +355,7 @@ def iniciar_driver(nav_info):
     print()
     for i in range(5, 0, -1):
         print(f"  Cerrando en {i}...", end="\r")
-    time.sleep(1) 
+        time.sleep(1) 
     print() 
 
     print(f"  [i] Cerrando {nav_info['nombre']}...")  
